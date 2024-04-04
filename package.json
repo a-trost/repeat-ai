@@ -44,6 +44,7 @@
 		"@fontsource-variable/dm-sans": "^5.0.5",
 		"@prismicio/client": "^7.4.0",
 		"@prismicio/svelte": "^1.1.1",
-		"clsx": "^2.1.0"
+		"clsx": "^2.1.0",
+		"gsap": "^3.12.5"
 	}
 }
