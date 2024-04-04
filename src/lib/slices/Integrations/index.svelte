@@ -1,4 +1,6 @@
 <script>
+	import { onMount } from 'svelte';
+	import gsap from 'gsap';
 	import { PrismicRichText, PrismicText } from '@prismicio/svelte';
 	import clsx from 'clsx';
 	import IconNpm from '~icons/fa6-brands/npm';
@@ -25,6 +27,69 @@
 
 	/** @type {import("@prismicio/client").Content.IntegrationsSlice} */
 	export let slice;
+
+	onMount(() => {
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce').matches;
+
+		if (prefersReducedMotion) return;
+
+		const tl = gsap.timeline({
+			repeat: -1,
+			defaults: { ease: 'power2.inOut' }
+		});
+
+		tl.to('.pulsing-logo', {
+			keyframes: [
+				{
+					filter: 'brightness(2)',
+					opacity: 1,
+					duration: 0.4,
+					ease: 'power2.in'
+				},
+				{ filter: 'brightness(1)', opacity: 0.7, duration: 0.9 }
+			]
+		});
+
+		tl.to(
+			'.signal-line',
+			{
+				keyframes: [
+					{ backgroundPosition: '0% 0%' },
+					{
+						backgroundPosition: '100% 100%',
+						stagger: { from: 'center', each: 0.3 },
+						duration: 1
+					}
+				]
+			},
+			'-=1.4'
+		);
+
+		tl.to(
+			'.pulsing-icon',
+			{
+				keyframes: [
+					{
+						opacity: 1,
+						duration: 1,
+						stagger: {
+							from: 'center',
+							each: 0.3
+						}
+					},
+					{
+						opacity: 0.4,
+						duration: 1,
+						stagger: {
+							from: 'center',
+							each: 0.3
+						}
+					}
+				]
+			},
+			'-=2'
+		);
+	});
 </script>
 
 <Bounded
