@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'DM Sans Variable', sans-serif;
+	background-image: url('/assets/noise-texture.svg');
+	@apply grid bg-gray-950 bg-repeat text-gray-50;
+}
+
+.glass-container {
+	position: relative;
+}
+
+.glass-container::before {
+	@apply absolute -inset-[10px] -z-10 rounded-xl border border-gray-100/20 bg-gray-200/10 backdrop-blur-md;
+	content: '';
+}
+
+.signal-line {
+	--rotation: 90deg;
+	@apply h-[20px] w-[1.5px] bg-gradient-to-t md:h-[1.5px] md:w-[30px] lg:w-[40px] xl:w-[50px];
+	background-color: hsla(0, 0%, 100%, 0.1);
+	background-image: linear-gradient(
+		var(--rotation),
+		rgba(255, 255, 255, 0) 50%,
+		#c39dff 50%,
+		rgba(255, 255, 255, 0) 70%
+	);
+	background-size: 500% 500%;
+}
+
+@media (max-width: 767px) {
+	.signal-line {
+		--rotation: 0deg;
+	}
+}

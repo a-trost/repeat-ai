@@ -1,0 +1,51 @@
+[
+	{
+		"uid": {
+			"__TYPE__": "UIDContent",
+			"value": "four"
+		},
+		"title": {
+			"__TYPE__": "StructuredTextContent",
+			"value": [
+				{
+					"type": "heading1",
+					"content": {
+						"text": "According"
+					}
+				}
+			]
+		},
+		"slices": {
+			"__TYPE__": "SliceContentType",
+			"value": [
+				{
+					"key": "rich_text$5ecec40d-becb-45bb-9538-ea1e11a3144f",
+					"name": "rich_text",
+					"widget": {
+						"__TYPE__": "SharedSliceContent",
+						"variation": "default",
+						"primary": {
+							"content": {
+								"__TYPE__": "StructuredTextContent",
+								"value": [
+									{
+										"type": "paragraph",
+										"content": {
+											"text": "Nostrud ad tempor fugiat officia minim elit commodo amet aliqua voluptate minim. Magna ut sit dolor laborum ex ut."
+										}
+									}
+								]
+							}
+						},
+						"items": [
+							{
+								"__TYPE__": "GroupItemContent",
+								"value": []
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+]

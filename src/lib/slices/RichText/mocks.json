@@ -1,0 +1,25 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ad irure qui incididunt est labore commodo adipisicing labore ullamco. Exercitation incididunt excepteur esse anim ipsum mollit dolor culpa officia labore. Anim duis dolore in nulla incididunt tempor do velit in reprehenderit Lorem ex culpa anim deserunt."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]
